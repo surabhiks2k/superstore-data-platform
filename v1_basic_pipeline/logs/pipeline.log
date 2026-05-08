@@ -1,0 +1,8 @@
+2026-05-07 23:19:17,823 - INFO - Transformation process started
+2026-05-07 23:19:17,823 - INFO - Valid record: 1
+2026-05-07 23:19:17,823 - ERROR - Rejected: 2,Alice,abc,UK | Reason: invalid literal for int() with base 10: 'abc'
+2026-05-07 23:19:17,823 - INFO - Valid record: 3
+2026-05-07 23:19:17,823 - ERROR - Rejected: 4,,30,USA | Reason: Invalid record
+2026-05-07 23:19:17,823 - ERROR - Rejected: 5,Sam,120,Canada | Reason: Invalid record
+2026-05-07 23:19:17,823 - INFO - Valid record: 6
+2026-05-07 23:19:17,823 - INFO - DQ report saved - 50.0% rejection rate
