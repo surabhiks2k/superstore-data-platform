@@ -1,68 +1,246 @@
-# Superstore Pipeline — Upgraded ETL
+Why I Built This
 
-Upgraded version of the v1 pipeline built on the
-real Superstore retail dataset (9,994 rows).
-Integrates Pandas for data processing and
-adds enrichment, profiling and DQ reporting.
+As part of my journey from Data Quality Engineering
+towards Data Engineering, I wanted to strengthen my
+hands-on skills in Python, SQL, Pandas, ETL design,
+and reusable pipeline development.
 
----
+# Superstore Data Platform
 
-## What It Does
+## Overview
 
-- Ingests Superstore CSV using pd.read_csv()
-- Validates records against business rules
-  - No negative sales
-  - Discount cannot exceed 100%
-  - Quantity must be positive
-  - Customer name cannot be empty
-- Splits into clean and rejected records
-- Enriches clean data using apply()
-  - Profit category — High Profit, Break Even, Loss
-  - Discount risk — High Risk, Medium Risk, Safe
-  - Product score — 0 to 100
-- Generates GroupBy category summary
-- Builds JSON DQ report with timestamp
-- Saves clean and rejected CSV outputs
-- Prints run summary with pass/fail status
+This repository documents my hands-on journey from Data Quality Engineering toward Data Engineering through a series of progressively advanced data pipeline projects.
+
+The objective is not only to process data but also to demonstrate software engineering principles, data quality frameworks, ETL design patterns, business rule implementation, reporting, and reusable pipeline architecture.
+
+Each version builds on the previous one and introduces new concepts commonly used in enterprise data platforms.
 
 ---
 
-## Files
+# Project Evolution
 
-- pipeline.py    → main pipeline orchestration
-- dq_checks.py   → all validation and DQ logic
-- logger.py      → centralised logging setup
-- data/          → input CSV files
+## Version 1 – Customer Data Pipeline
+
+A foundational ETL pipeline built using core Python.
+
+### Features
+
+* File-based ingestion
+* Data validation
+* Data transformation
+* Rejected record handling
+* Data Quality reporting
+* JSON output generation
+* SQLite database loading
+* Logging and exception handling
+
+### Concepts Demonstrated
+
+* Functions
+* File Handling
+* Lists and Dictionaries
+* Exception Handling
+* Logging
+* JSON Processing
+* SQLite Integration
+* ETL Fundamentals
+
+### Pipeline Flow
+
+Input File
+
+↓
+
+Validation & Transformation
+
+↓
+
+Clean / Rejected Records
+
+↓
+
+DQ Report
+
+↓
+
+JSON Output
+
+↓
+
+SQLite Load
+
+↓
+
+Load Validation
 
 ---
 
-## How to Run
+## Version 2 – OOP Data Quality Pipeline
 
-python pipeline.py
+An object-oriented implementation of a reusable data quality framework using the Superstore dataset.
+
+### Features
+
+* CSV ingestion using Pandas
+* Data validation
+* Business rule enrichment
+* Product scoring
+* Discount risk analysis
+* Profitability classification
+* Data Quality reporting
+* Automated JSON report generation
+
+### Business Rules
+
+#### Product Score
+
+Based on:
+
+* Sales
+* Quantity
+* Discount
+* Profit
+
+#### Profit Category
+
+* High Profit
+* Break Even
+* Loss
+
+#### Discount Risk
+
+* High Risk
+* Medium Risk
+* Safe
+
+### OOP Concepts Demonstrated
+
+#### Classes and Objects
+
+Reusable pipeline architecture.
+
+#### Inheritance
+
+DataPipeline inherits from Pipeline.
+
+#### Class Variables
+
+Tracking total pipelines created.
+
+#### Instance Variables
+
+Pipeline-specific state.
+
+#### Static Methods
+
+Reusable utility functions.
+
+#### Class Methods
+
+Pipeline management and tracking.
+
+#### Method Chaining
+
+load → validate → enrich → report → save
+
+#### Magic Methods
+
+* **str**()
+* **repr**()
+
+### Data Quality Metrics
+
+* Total Records
+* Null Count
+* Duplicate Count
 
 ---
 
-## Key Improvement Over V1
+## Version 3 – Enterprise Data Platform (In Progress)
 
-| Feature | V1 Pipeline | Superstore Pipeline |
-|---|---|---|
-| Data source | Text file | Real CSV — 9,994 rows |
-| Parsing | Manual split | pd.read_csv() |
-| Validation | Basic rules | Business rules + Pandas |
-| Enrichment | None | apply() — 3 new columns |
-| Summary | Basic count | GroupBy category report |
-| Output | JSON + SQLite | CSV + JSON + SQL |
-| Structure | Single file | Modular — 3 files |
+The next phase extends the framework toward production-style data engineering patterns.
+
+### Planned Features
+
+* Configuration Driven Pipelines
+* Modular Architecture
+* Data Quality Framework
+* Advanced Validation Rules
+* Data Profiling
+* SQL Analytics Layer
+* Reporting Framework
+* Pipeline Monitoring
+* Reusable Components
+* End-to-End ETL Workflow
+
+### Technologies
+
+* Python
+* Pandas
+* SQL
+* JSON
+* Logging
+* OOP
+* Git
+* GitHub
+
 
 ---
 
-## Tech Used
+# SQL Analytics Repository
 
-- Python 3
-- Pandas
-- SQLite3
-- JSON
-- Logging
+The repository also contains SQL practice organized by topic.
 
+### Topics Covered
 
+* Joins
+* Aggregations
+* CASE WHEN
+* CTEs
+* Window Functions
+* Ranking Functions
+* Business Analytics
+* Growth Analysis
+
+---
+
+# Skills Demonstrated
+
+### Data Engineering
+
+* ETL Development
+* Data Validation
+* Data Quality Frameworks
+* Reporting
+* Data Processing
+
+### Programming
+
+* Python
+* Pandas
+* OOP
+* JSON
+* Logging
+
+### Analytics
+
+* SQL
+* Business Rules
+* Data Profiling
+* KPI Analysis
+
+### Software Engineering
+
+* Reusable Design
+* Exception Handling
+* Modular Development
+* Version Control
+
+---
+
+# Why This Repository
+
+As part of my transition toward Data Engineering, I wanted to move beyond theory and build practical projects that demonstrate real-world concepts used in enterprise data platforms.
+
+This repository captures that journey—from a basic ETL pipeline to a reusable object-oriented framework and eventually toward large-scale data engineering workflows.
 
