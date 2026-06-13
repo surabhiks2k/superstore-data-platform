@@ -1,0 +1,44 @@
+{
+    "total_records": 9994,
+    "duplicate_records": 0,
+    "null values": {
+        "Row ID": 0,
+        "Order ID": 0,
+        "Order Date": 0,
+        "Ship Date": 0,
+        "Ship Mode": 0,
+        "Customer ID": 0,
+        "Customer Name": 0,
+        "Segment": 0,
+        "Country": 0,
+        "City": 0,
+        "State": 0,
+        "Postal Code": 0,
+        "Region": 0,
+        "Product ID": 0,
+        "Category": 0,
+        "Sub-Category": 0,
+        "Product Name": 0,
+        "Sales": 0,
+        "Quantity": 0,
+        "Discount": 0,
+        "Profit": 0
+    },
+    "category_summary_profit_margin_perc": {
+        "0": 2.4866951334588867,
+        "1": 17.035158390028652,
+        "2": 17.395712076891936
+    },
+    "Expcted_vs_Actual_merged_GAP": {
+        "0": -12.513304866541112,
+        "1": -2.964841609971348,
+        "2": -7.604287923108064
+    },
+    "Expcted_vs_Actual_merged_status": {
+        "0": "Failed",
+        "1": "Failed",
+        "2": "Failed"
+    },
+    "clean_record": 9994,
+    "Rejected_record": 0
+}
