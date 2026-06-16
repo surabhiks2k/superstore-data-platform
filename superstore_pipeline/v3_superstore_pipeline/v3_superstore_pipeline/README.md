@@ -175,4 +175,5 @@ This project demonstrates:
 * Logging and error handling
 
 ---
-
+Tech Stack
+Python · pandas · Object-Oriented Design · Logging · JSON

@@ -57,9 +57,15 @@ class DataPipeline:
             'total_records':len(self.df),
             'duplicate_records':self.validator.duplicated_count,
             'null values': self.validator.df.isnull().sum().to_dict(),
-            'category_summary_profit_margin_perc' : self.analyse.summary['category']['Profit_Margin_perc'].to_dict(),
-            'Expcted_vs_Actual_merged_GAP': self.analyse.summary['margin_check']['GAP'].to_dict(),
-            'Expcted_vs_Actual_merged_status': self.analyse.summary['margin_check']['status'].to_dict(),
+            'category_summary_profit_margin_perc' : dict(zip(
+                self.analyse.summary['category']['Category'],
+                self.analyse.summary['category']['Profit_Margin_perc'])),
+            'Expcted_vs_Actual_merged_GAP': dict(zip(
+                self.analyse.summary['margin_check']['Category'],
+                self.analyse.summary['margin_check']['GAP'])),
+            'Expcted_vs_Actual_merged_status': dict(zip(
+                self.analyse.summary['margin_check']['Category'],
+                self.analyse.summary['margin_check']['status'])),
             'clean_record':len(self.validator.clean),
             'Rejected_record': len(self.validator.rejected)}
         return self
