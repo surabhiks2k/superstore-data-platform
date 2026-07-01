@@ -9,7 +9,7 @@ and reusable pipeline development.
 
 ## Overview
 
-This repository documents my hands-on journey from Data Quality Engineering toward Data Engineering through a series of progressively advanced data pipeline projects.
+This repository documents my hands-on journey toward Data Engineering through a series of progressively advanced data pipeline projects.
 
 The objective is not only to process data but also to demonstrate software engineering principles, data quality frameworks, ETL design patterns, business rule implementation, reporting, and reusable pipeline architecture.
 
